@@ -4,7 +4,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thinkstudeo/textlocal-notification-channel.svg?style=flat-square)](https://packagist.org/packages/thinkstudeo/textlocal-notification-channel)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/thinkstudeo/textlocal-notification-channel/master.svg?style=flat-square)](https://travis-ci.org/thinkstudeo/textlocal-notification-channel)
-[![StyleCI](https://styleci.io/repos/183029816/shield)](https://styleci.io/repos/183029816)
+[![StyleCI](https://styleci.io/repos/183053426/shield)](https://styleci.io/repos/183053426)
 [![SymfonyInsight](https://insight.symfony.com/projects/5a7f8ac7-e224-4794-87c4-256cdb5d7ba1/mini.svg)](https://insight.symfony.com/projects/5a7f8ac7-e224-4794-87c4-256cdb5d7ba1)
 [![Quality Score](https://img.shields.io/scrutinizer/g/thinkstudeo/textlocal-notification-channel.svg?style=flat-square)](https://scrutinizer-ci.com/g/thinkstudeo/textlocal-notification-channel)
 [![Total Downloads](https://img.shields.io/packagist/dt/thinkstudeo/textlocal-notification-channel.svg?style=flat-square)](https://packagist.org/packages/thinkstudeo/textlocal-notification-channel)
