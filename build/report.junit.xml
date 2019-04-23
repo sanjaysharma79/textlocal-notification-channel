@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Textlocal Test Suite" tests="4" assertions="12" errors="1" failures="0" skipped="0" time="2.424843">
+    <testsuite name="NotificationChannels\Textlocal\Tests\TextlocalChannelIntegrationTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelIntegrationTest.php" tests="2" assertions="6" errors="1" failures="0" skipped="0" time="2.408485">
+      <testcase name="test_can_send_sms_via_textlocal" class="NotificationChannels\Textlocal\Tests\TextlocalChannelIntegrationTest" classname="NotificationChannels.Textlocal.Tests.TextlocalChannelIntegrationTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelIntegrationTest.php" line="16" assertions="0" time="0.430710">
+        <error type="NotificationChannels\Textlocal\Exceptions\CouldNotSendNotification">NotificationChannels\Textlocal\Tests\TextlocalChannelIntegrationTest::test_can_send_sms_via_textlocal
+NotificationChannels\Textlocal\Exceptions\CouldNotSendNotification: Textlocal responded with error: 'Messages can only be sent between 9am to 9pm as restricted by TRAI NCCP regulation [192]'
+
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/Exceptions/CouldNotSendNotification.php:9
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/TextlocalClient.php:223
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/TextlocalClient.php:206
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/TextlocalClient.php:173
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/TextlocalClient.php:160
+/Users/neerav/Packages/laravel/textlocal-notification-channel/src/TextlocalChannel.php:34
+/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelIntegrationTest.php:23
+</error>
+      </testcase>
+      <testcase name="it_can_send_transactional_sms_via_textlocal" class="NotificationChannels\Textlocal\Tests\TextlocalChannelIntegrationTest" classname="NotificationChannels.Textlocal.Tests.TextlocalChannelIntegrationTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelIntegrationTest.php" line="34" assertions="6" time="1.977775"/>
+    </testsuite>
+    <testsuite name="NotificationChannels\Textlocal\Tests\TextlocalChannelTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelTest.php" tests="2" assertions="6" errors="0" failures="0" skipped="0" time="0.016358">
+      <testcase name="text_sms_is_sent_via_textlocal" class="NotificationChannels\Textlocal\Tests\TextlocalChannelTest" classname="NotificationChannels.Textlocal.Tests.TextlocalChannelTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelTest.php" line="15" assertions="3" time="0.013562"/>
+      <testcase name="sms_is_sent_via_textlocal_transactional_account" class="NotificationChannels\Textlocal\Tests\TextlocalChannelTest" classname="NotificationChannels.Textlocal.Tests.TextlocalChannelTest" file="/Users/neerav/Packages/laravel/textlocal-notification-channel/tests/TextlocalChannelTest.php" line="44" assertions="3" time="0.002796"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

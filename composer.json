@@ -1,0 +1,49 @@
+{
+    "name": "thinkstudeo/textlocal-notification-channel",
+    "description": "Laravel notification channel for Textlocal Api",
+    "homepage": "https://github.com/thinkstudeo/textlocal-notification-channel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neerav Pandya",
+            "email": "neerav@thinkstudeo.com",
+            "homepage": "https://thinkstudeo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "illuminate/notifications": "5.6.*|5.7.*|5.8.*",
+        "illuminate/support": "5.6.*|5.7.*|5.8.*",
+        "guzzlehttp/guzzle": "^5.0|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "orchestra/testbench": "~3.6.0|~3.7.0|~3.8.0",
+        "orchestra/database": "~3.6.0|~3.7.0|~3.8.0",
+        "mockery/mockery": "^0.9.5|^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Textlocal\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Textlocal\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\Textlocal\\TextlocalServiceProvider"
+            ]
+        }
+    }
+}

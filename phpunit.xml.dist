@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Textlocal Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="Testing"/>
+        <env name="TEXTLOCAL_TRANSACTIONAL_KEY" value="API_KEY for transactional account"/>
+        <env name="TEXTLOCAL_TRANSACTIONAL_FROM" value="TXTLCL"/>
+        <env name="TEXTLOCAL_PROMOTIONAL_KEY" value="API_KEY for transactional account"/>
+        <env name="TEXTLOCAL_PROMOTIONAL_FROM" value="TXTLCL"/>
+
+        <env name="TEST_TEXTLOCAL_TRANSACTIONAL_TEMPLATE" value="Your approved template for Textlocal transactional account"/>
+        <env name="TEST_TEXTLOCAL_TRANSACTIONAL_MOBILE" value="Valid phone number"/>
+        <env name="TEST_TEXTLOCAL_TRANSACTIONAL_CC" value="Another Valid Phone number"/>
+    </php>
+</phpunit>
