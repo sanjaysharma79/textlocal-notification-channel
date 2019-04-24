@@ -1,4 +1,3 @@
-
 # Textlocal Notification Channel for Laravel 5.6+.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thinkstudeo/textlocal-notification-channel.svg?style=flat-square)](https://packagist.org/packages/thinkstudeo/textlocal-notification-channel)
@@ -13,54 +12,47 @@ This package makes it easy to send notifications using [Textlocal](https://textl
 
 Supports using both Transactional and Promotional accounts with Textlocal at the same time.
 
-
-
 ## Contents
 
-- [Textlocal Notification Channel for Laravel 5.3+.](#textlocal-notification-channel-for-laravel-53)
-	- [Contents](#contents)
-	- [Installation](#installation)
-		- [Setting up the Textlocal service](#setting-up-the-textlocal-service)
-	- [Usage](#usage)
-	- [Changelog](#changelog)
-	- [Testing](#testing)
-	- [Security](#security)
-	- [Contributing](#contributing)
-	- [Credits](#credits)
-	- [License](#license)
-
+- [Textlocal Notification Channel for Laravel 5.6+.](#textlocal-notification-channel-for-laravel-56)
+  - [Contents](#contents)
+  - [Installation](#installation)
+    - [Setting up the Textlocal service](#setting-up-the-textlocal-service)
+  - [Usage](#usage)
+    - [Using Textlocal Promotional Account](#using-textlocal-promotional-account)
+    - [Using Textlocal Transactional Account](#using-textlocal-transactional-account)
+  - [Changelog](#changelog)
+  - [Testing](#testing)
+  - [Security](#security)
+  - [Contributing](#contributing)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Installation
 
 ```bash
 composer require thinkstudeo/textlocal-notification-channel
 ```
-If you are using Laravel version below 5.5, just add the service provider to the providers array in `config/app.php`
 
-```php
-'providers' => [
-    ...
-    NotificationChannels\Textlocal\TextlocalServiceProvider::class,
-],
-```
-For Laravel 5.5 and above, the service provider will be registered automatically.
+Taking advantage of automatic package discovery available since Laravel 5.5, the service provider will be registered automatically.
 
 ### Setting up the Textlocal service
 
 Add your textlocal accounts, api url and credentials in the `config/services.php` file.
 The url is required to be set in the config file because, textlocal has different urls for different countries.
 Atleast for India, its different. `https://api/textlocal.in/send/`
+
 ```php
 ...
 'textlocal' => [
     'url' => 'https://api.textlocal.com/send/'	//or 'https://api.textlocal.in/send/ - for India
-	
+
     //Textlocal Transactional Account
     'transactional' => [
         'apiKey' => env('TEXTLOCAL_TRANSACTIONAL_KEY'),
         'from' => env('TEXTLOCAL_TRANSACTIONAL_FROM', 'TXTLCL')
 	],
-	
+
     //Textlocal Promotional Account
     'promotional' => [
         'apiKey' => env('TEXTLOCAL_PROMOTIONAL_KEY'),
@@ -69,7 +61,9 @@ Atleast for India, its different. `https://api/textlocal.in/send/`
 ],
 ...
 ```
+
 Don't forget to add the keys to your `.env` file
+
 ```
 ...
 TEXTLOCAL_TRANSACTIONAL_KEY= <Your Textlocal Transactional Account API KEY>
@@ -78,6 +72,7 @@ TEXTLOCAL_PROMOTIONAL_KEY= <Your Textlocal Promotional Account API KEY>
 TEXTLOCAL_PROMOTIONAL_FROM= <Registered/Approved sender for your Textlocal Promotional Account>
 ...
 ```
+
 ## Usage
 
 To use the channel, include the `NotificationChannels\Textlocal\TextlocalChannel` class in the `via()` method of your notification class.
@@ -179,12 +174,12 @@ class SendLoginOtp extends Notification
 }
 ```
 
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Testing
+
 Fill in the `env` values in the `phpunit.xml.dist`. The tests depends on these values.
 
 ```xml
@@ -201,7 +196,8 @@ Fill in the `env` values in the `phpunit.xml.dist`. The tests depends on these v
     <env name="TEST_TEXTLOCAL_TRANSACTIONAL_CC" value="Another Valid Phone number"/>
 </php>
 ```
-``` bash
+
+```bash
 $ composer test
 ```
 
@@ -215,8 +211,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Neerav Pandya](https://github.com/neeravp)
-- [All Contributors](../../contributors)
+-   [Neerav Pandya](https://github.com/neeravp)
+-   [All Contributors](../../contributors)
 
 ## License
 
